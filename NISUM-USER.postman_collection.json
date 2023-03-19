@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "41a59d56-d748-49b5-ae36-452f13ae88a7",
+		"name": "NISUM-USER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23884880"
+	},
+	"item": [
+		{
+			"name": "saveUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzkxODA2NzQsImlzcyI6Imh0dHBzOi8vd3d3Lm5pc3VtLmNvbSIsInN1YiI6InRlc3RAdGVzdC5jbCIsImV4cCI6MTY3OTE4MDk3NH0.6nGps26Fi_uab9jYTFHzykk3lA-syXgmrRBcL36a36sPzysJJ0JoEFbqJTq3KSC3sTM47PmpGSXqANlEUsthgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"David Angeles\",\r\n  \"email\":\"davidangeleshuaman@gmail.cl\",\r\n  \"password\":\"Tunter00\",\r\n  \"phones\":[\r\n    {\r\n      \"number\":\"1234567\",\r\n      \"citycode\":\"1\",\r\n      \"contrycode\":\"57\"\r\n    },\r\n    {\r\n      \"number\":\"976767996\",\r\n      \"citycode\":\"1\",\r\n      \"contrycode\":\"57\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/nisum-user/api/v1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"nisum-user",
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/nisum-user/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"nisum-user",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzkxODE5MzUsImlzcyI6Imh0dHBzOi8vd3d3Lm5pc3VtLmNvbSIsInN1YiI6InRlc3RAdGVzdC5jbCIsImV4cCI6MTY3OTE4MjIzNX0.1XYAwYLaGADgKQ7YRWGKri9SA0N6VX1Jfo5y2NU_hJhs0PXvdQ5_MNOhDP26x4YorJoZzO0VzvycSOlxCobnbw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/nisum-user/api/v1/5fa78ebf-01a3-4e68-b8ad-eea4630cd661",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"nisum-user",
+						"api",
+						"v1",
+						"5fa78ebf-01a3-4e68-b8ad-eea4630cd661"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NTI1NjAyMTYsImlzcyI6Imh0dHBzOi8vd3d3Lm5pc3VtLmNvbSIsInN1YiI6InRlc3RAdGVzdC5jbCIsImV4cCI6MTY1MjU2MDUxNn0.eHnlxU2VXZF6wWJqf6thClTNROfE3P8tHRaiyQKbFfL1G5G_VVPcLSsWJzgDQQt1C0b0qR42cfc8iY1wKCLI-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"David Antonio Angeles Huaman\",\r\n  \"email\":\"davidangelesh@gmail.cl\",\r\n  \"password\":\"Hunter666\",\r\n  \"phones\":[\r\n    {\r\n      \"number\":\"1234567\",\r\n      \"citycode\":\"1\",\r\n      \"contrycode\":\"57\"\r\n    },\r\n    {\r\n      \"number\":\"976767996\",\r\n      \"citycode\":\"1\",\r\n      \"contrycode\":\"57\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/nisum-user/api/v1/5fa78ebf-01a3-4e68-b8ad-eea4630cd661",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"nisum-user",
+						"api",
+						"v1",
+						"5fa78ebf-01a3-4e68-b8ad-eea4630cd661"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzkxODE5MzUsImlzcyI6Imh0dHBzOi8vd3d3Lm5pc3VtLmNvbSIsInN1YiI6InRlc3RAdGVzdC5jbCIsImV4cCI6MTY3OTE4MjIzNX0.1XYAwYLaGADgKQ7YRWGKri9SA0N6VX1Jfo5y2NU_hJhs0PXvdQ5_MNOhDP26x4YorJoZzO0VzvycSOlxCobnbw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/nisum-user/api/v1/5fa78ebf-01a3-4e68-b8ad-eea4630cd661",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"nisum-user",
+						"api",
+						"v1",
+						"5fa78ebf-01a3-4e68-b8ad-eea4630cd661"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

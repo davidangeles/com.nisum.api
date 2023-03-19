@@ -1,0 +1,17 @@
+{
+  "name":"David Angeles",
+  "email":"davidangeleshuaman22@gmail.cl",
+  "password":"Tunter00",
+  "phones":[
+    {
+      "number":"1234567",
+      "citycode":"1",
+      "contrycode":"57"
+    },
+    {
+      "number":"976767996",
+      "citycode":"1",
+      "contrycode":"57"
+    }
+  ]
+}
